@@ -1,0 +1,3 @@
+[submodule "wasm-book/rustwasm-book-repo"]
+	path = wasm-book/rustwasm-book-repo
+	url = https://github.com/rustwasm/book
