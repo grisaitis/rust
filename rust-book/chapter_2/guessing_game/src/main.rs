@@ -11,7 +11,13 @@ fn main() {
         io::stdin()
             .read_line(&mut guess)
             .expect("failed to read line.");
-        let guess: u32 = guess.trim().parse().expect("Failed to parse");
+        let guess: u32 = match guess.trim().parse() {
+            Ok(num) => num,
+            Err(error) => {
+                println!("Error with input: {}", error);
+                continue;
+            }
+        };
         println!("you guessed {}.", guess);
         match guess.cmp(&secret) {
             Ordering::Less => println!("Too low"),
