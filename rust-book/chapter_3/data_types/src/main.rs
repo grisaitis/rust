@@ -4,4 +4,11 @@ fn main() {
 
     let (x, y, z) = tup;
     println!("{}", y);
+
+    let a = [10_u8; 10];
+    println!("{}", a[2]);
+
+    let a = [1, 2, 3, 4, 5];
+    let index = 10;
+    let element = a[index];
 }
