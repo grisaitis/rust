@@ -6,7 +6,7 @@ fn main() {
     println!("guess the number!");
     let secret: u32 = rand::thread_rng().gen_range(1, 101);
     loop {
-        println!("input your guess...");
+        println!("input a guess...");
         let mut guess = String::new(); // growable, utf-8
         io::stdin()
             .read_line(&mut guess)
@@ -18,7 +18,6 @@ fn main() {
                 continue;
             }
         };
-        println!("you guessed {}.", guess);
         match guess.cmp(&secret) {
             Ordering::Less => println!("Too low"),
             Ordering::Greater => println!("Too high"),
